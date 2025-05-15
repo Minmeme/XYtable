@@ -26,7 +26,7 @@ with open(csv_filename, mode='w', newline='') as file:
 # ตัวแปรสำหรับจับเวลา
 last_save_time = time.time()
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 while True:
     ret, frame = cap.read()
@@ -57,9 +57,9 @@ while True:
     white_mask = cv2.inRange(hsv, white_lower, white_upper)
 
     yellow_count = detect_color(frame, yellow_mask, (0, 255, 255), "Yellow", 30)
-    # blue_count = detect_color(frame, blue_mask, (255, 0, 0), "Blue", 60)
-    # pink_count = detect_color(frame, pink_mask, (255, 0, 255), "Pink", 90)
-    # white_count = detect_color(frame, white_mask, (255, 255, 255), "White", 120)
+    blue_count = detect_color(frame, blue_mask, (255, 0, 0), "Blue", 60)
+    pink_count = detect_color(frame, pink_mask, (255, 0, 255), "Pink", 90)
+    white_count = detect_color(frame, white_mask, (255, 255, 255), "White", 120)
 
     current_time = time.time()
     if (current_time - last_save_time >= 5) and (yellow_count > 0 or blue_count > 0 or pink_count > 0 or white_count > 0):
