@@ -101,10 +101,19 @@ def index():
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route('/table_day')
+def table_day():
+    return render_template('table-day.html')
+
+@app.route('/table_month')
+def table_month():
+    return render_template('table-month.html')
+
 @socketio.on('get_data')
 def send_data():
     last_row = get_last_row()
     emit('update_data', {'totals': last_row})
+         
          
 def check_csv_updates():
     while True:
