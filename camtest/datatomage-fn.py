@@ -2,7 +2,7 @@ import csv
 import time
 import serial
 
-# ser = serial.Serial('/dev/ttyUSB0', 9600) 
+ser = serial.Serial('/dev/ttyUSB0', 9600) 
 
 # ฟังก์ชั่นเพื่ออ่านไฟล์ CSV ทีละบรรทัดและเช็คว่าเป็นสีอะไรบ้าง
 def monitor_csv_with_colors(csv_file, known_lines):
@@ -22,16 +22,16 @@ def monitor_csv_with_colors(csv_file, known_lines):
                     # ตรวจสอบค่าของแต่ละสีในบรรทัดนั้น
                     if line[1] == '1':
                         colors.append('Yellow')
-                        # ser.write('yellow\n')
+                        ser.write('yellow\n')
                     if line[2] == '1':
                         colors.append('Blue')
-                        # ser.write('Blue\n')
+                        ser.write('Blue\n')
                     if line[3] == '1':
                         colors.append('Pink')
-                        # ser.write('Pink\n')
+                        ser.write('Pink\n')
                     if line[4] == '1':
                         colors.append('White')
-                        # ser.write('white\n')
+                        ser.write('white\n')
 
                     # แสดงผลข้อมูลใหม่พร้อมสี
                     if colors:

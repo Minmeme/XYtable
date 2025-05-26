@@ -31,17 +31,17 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Cartesian Robot</a>
+      <a class="navbar-brand" href="index.html">Cartesian Robot</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">now</a>
+            <a class="nav-link"  href="index.html">now</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="table-day.html">day</a>
+            <a class="nav-link active" aria-current="page" href="#">day</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="table-month.html">month</a>
@@ -56,49 +56,62 @@
 
 
   <div class="container mt-4">
-    <h1 class="mb-3">Color Totals</h1>
+    <h1 class="mb-3">Day Totals</h1>
     <p class="text-muted">Last update: <span id="timestamp">Loading...</span></p>
 
     <table class="table table-bordered border-primary" style="width: 60%; margin: auto;">
       <thead class="table-light">
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Color</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Status</th>
+          <th scope="col">Timestamp</th>
+          <th scope="col">pink</th>
+          <th scope="col">Yellow</th>
+          <th scope="col">Blue</th>
+          <th scope="col">White</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Pink</td>
-          <td id="pink">-</td>
+          <td>2025-03-20</td>
           <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Yellow</td>
-          <td id="yellow">-</td>
+          <td>2025-03-21</td>
           <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Blue</td>
-          <td id="blue">-</td>
+          <td>2025-03-22</td>
           <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td>White</td>
-          <td id="white">-</td>
+          <td>2025-03-23</td>
           <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+
         </tr>
+        
       </tbody>
     </table>
-
-    <div class="mt-4 text-center">
-      <img src="{{ url_for('video_feed') }}" width="60%" class="border rounded shadow">
-    </div>
   </div>
+
+
 </body>
 </html>
